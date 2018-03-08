@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CMSISDebug</string>
+    <string name="firmware"/>
+    <string name="connect">Anslut CMSIS-DAP&#8230;</string>
+    <string name="detecting_msg">Letar&#8230;</string>
+    <string name="unknown_msg">(Okänd)</string>
+    <string name="dev_detect">Upptäckt enhet:</string>
+    <string name="permission_denied">Rättigheter saknas för enhet</string>
+    <string name="no_dev_detect">Fel: Kunde inte hitta någon USB-enhet.</string>
+    <string name="connect_switch">CMSIS-DAP</string>
+    <string name="go_button">Kör</string>
+    <string name="halt_button">Stopp</string>
+    <string name="reset_button">Reset</string>
+    <string name="cmsis_icon">CMSIS-DAP ikon</string>
+    <string name="read_button">Läs</string>
+    <string name="read_text">20000000</string>
+    <string name="write_button">Skriv</string>
+    <string name="write_text">0</string>
+    <string name="addr_text">Adress:</string>
+    <string name="fw_version">Firmware-version:</string>
+    
+</resources>

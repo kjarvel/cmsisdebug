@@ -1,0 +1,263 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        tools:context=".MainActivity" >
+
+        <LinearLayout
+            android:id="@+id/switchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cmsis_icon"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_cmsis" />
+
+            <Switch
+                android:id="@+id/cmsis_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:focusableInTouchMode="true"
+                android:text="@string/connect_switch" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/vertL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/otherText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="20dp"
+                android:text="@string/connect" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/bContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/firmwareText"
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/firmware" />
+
+                <TextView
+                    android:id="@+id/regView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:textSize="12sp"
+                    android:typeface="monospace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/addrContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|right"
+                    android:gravity="right" >
+
+                    <TextView
+                        android:id="@+id/addrText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/addr_text"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <EditText
+                        android:id="@+id/readAddr"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:digits="0123456789ABCDEF"
+                        android:ems="10"
+                        android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                        android:maxLength="8"
+                        android:selectAllOnFocus="false"
+                        android:text="@string/read_text"
+                        android:textColor="@android:color/darker_gray"
+                        android:typeface="monospace" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/readContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right" >
+
+                    <Button
+                        android:id="@+id/readButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:text="@string/read_button"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <EditText
+                        android:id="@+id/readValue"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:digits="0123456789ABCDEF"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                        android:maxLength="8"
+                        android:selectAllOnFocus="false"
+                        android:textColor="@android:color/darker_gray"
+                        android:typeface="monospace" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/writeContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right" >
+
+                    <Button
+                        android:id="@+id/writeButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:text="@string/write_button"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <EditText
+                        android:id="@+id/writeValue"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:digits="0123456789ABCDEF"
+                        android:ems="10"
+                        android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                        android:maxLength="8"
+                        android:selectAllOnFocus="false"
+                        android:text="@string/write_text"
+                        android:textColor="@android:color/darker_gray"
+                        android:typeface="monospace" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/dbgContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/reset_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/reset_button"
+                android:textColor="@android:color/darker_gray" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                android:id="@+id/haltButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/halt_button"
+                android:textColor="@android:color/darker_gray" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                android:id="@+id/goButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/go_button"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

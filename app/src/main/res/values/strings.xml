@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CMSISDebug</string>
+    <string name="firmware"/>
+    <string name="connect">Connect CMSIS-DAP&#8230;</string>
+    <string name="detecting_msg">Detecting&#8230;</string>
+    <string name="unknown_msg">(Unknown)</string>
+    <string name="dev_detect">Detected device:</string>
+    <string name="permission_denied">Permission denied for device</string>
+    <string name="no_dev_detect">Error: Could not detect any USB device.</string>
+    <string name="connect_switch">CMSIS-DAP</string>
+    <string name="go_button">Go</string>
+    <string name="halt_button">Halt</string>
+    <string name="reset_button">Reset</string>
+    <string name="cmsis_icon">CMSIS-DAP icon</string>
+    <string name="read_button">Read</string>
+    <string name="read_text">20000000</string>
+    <string name="write_button">Write</string>
+    <string name="write_text">0</string>
+    <string name="addr_text">Address:</string>
+    <string name="fw_version">Firmware version:</string>
+    
+</resources>
